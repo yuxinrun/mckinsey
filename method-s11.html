@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f4ee">
+<meta name="author" content="鱼心快跑">
+<meta name="description" content="费米估算 / 数量级速算（S11）通俗详解：把大问题拆成几个「各自能猜、也各自能去查」的小数字，先求个数量级。 含图表拆解、三步上手、咖啡摊算例与常见翻车。">
+<title>费米估算 / 数量级速算 · S11 | 把话想清楚 · 鱼心快跑</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="m-s11" data-next="method-s12.html" data-minutes="5" data-cat="solving" data-no="S11">
+<div id="siteNav"></div>
+<main class="readable mp-page tone-teal">
+
+<section class="wrap mp-hero">
+  <nav class="mp-crumb" aria-label="面包屑"><a href="index.html">首页</a><span>/</span><a href="methods.html">48 招全集</a><span>/</span><a href="methods-solving.html">解题与分析</a><span>/</span><b>S11</b></nav>
+  <div class="mp-hero-top"><span class="mp-no">S11</span><span class="cat-tag solving">解题</span><span class="badge b">B</span></div>
+  <h1 class="mp-title">费米估算 / 数量级速算</h1>
+  <p class="mp-en mono">BACK-OF-THE-ENVELOPE</p>
+  <p class="mp-ask">没数据的时候，能不能先算出一个够用的量级？</p>
+  <p class="mp-plain">把大问题拆成几个「各自能猜、也各自能去查」的小数字，先求个数量级。</p>
+  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>B · 需带限定词</span><span>第 11 / 48 招</span></div>
+  <div class="mp-keywords"><span class="mp-kw"># 数量级</span><span class="mp-kw"># 因子</span><span class="mp-kw"># 可修正</span><span class="mp-kw"># 速算</span></div>
+</section>
+
+<section class="section mp-sec" id="p1" style="border-top:0;padding-top:28px">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>01</b> · 先看图 / THE PICTURE</span><h2 class="h2">一张图，先把这招的样子看明白</h2></div>
+    <figure class="fig mp-fig"><div class="fig-head"><span>FIG 01 · 估算式</span><span class="fig-title">一周能卖多少杯：四个因子相乘</span></div><div class="fig-body"><div class="mp-formula"><div class="mp-f-item"><span class="mp-f-sym">3 万</span><b>片区人口</b><span>可查街道数据</span></div><div class="mp-f-item"><span class="mp-f-sym">× 20%</span><b>会喝咖啡</b><span>可查常识</span></div><div class="mp-f-item"><span class="mp-f-sym">× 2</span><b>每周杯数</b><span>可问老客</span></div><div class="mp-f-item"><span class="mp-f-sym">× 5%</span><b>本站份额</b><span>可看小票</span></div><div class="mp-f-item"><span class="mp-f-sym">= 600</span><b>杯 / 周</b><span>量级结论</span></div></div></div><figcaption><b>结论：</b>每个因子都对应一个「去哪查」，这份估算才有被改好的可能。<span class="fig-note">口径：全部为教学示意参数，不是市场数据或销售预测。</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p2">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
+    <div class="mp-core"><p>费米估算要的不是精确，是<strong>别在数量级上错</strong>。做法是把目标拆成 3–5 个因子相乘，每个因子单独给一个「差不多」的值；因为误差会互相抵消一部分，结果常常比直觉靠谱。</p><p>它真正的威力在<strong>可修正</strong>：结果写成一个乘法式子，谁觉得哪个数不对，就单独改那一个，不用推翻整份估算。凡是不能写成式子的「我估计大概……」，都没法被改进。</p></div>
+    <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>把目标写成 3–5 个因子相乘。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>每个因子给一个能说明理由的粗略值。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>算出量级，再挑最没把握的那个去查实。</p></div></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p3">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
+    <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>问：「这个片区一周能卖多少杯咖啡？」拆成：<em class="mp-hl">3 万人</em> × <em class="mp-hl">20%</em>会喝咖啡 × 每人每周 <em class="mp-hl">2 杯</em> × 本站能拿到 <em class="mp-hl">5%</em>的份额 = <em class="mp-hl">600 杯/周</em>。四个数都能各自去查：人口查街道数据、比例查常识、频次问老客、份额看自己小票。若最后发现「20%」明显偏高，只改这一格，结论立刻从 600 掉到 300。<strong>先有量级，再决定要不要做精细调研。</strong></p></div>
+    <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 对照表</span><span class="fig-title">估算完，该先查哪一个？</span></div><div class="fig-body"><div class="table-scroll" style="margin-top:0"><table><thead><tr><th>因子</th><th>心里有底吗</th><th>去哪查</th></tr></thead><tbody><tr><td>片区人口 3 万</td><td>较有底</td><td>街道公开数据</td></tr><tr><td>会喝咖啡 20%</td><td>最没底</td><td>小范围问 20 个人</td></tr><tr><td>每周 2 杯</td><td>一般</td><td>翻两周小票</td></tr><tr><td>份额 5%</td><td>较有底</td><td>自己摊位流水</td></tr></tbody></table></div></div><figcaption><b>结论：</b>优先查「最没底 × 影响最大」的那一格，别平均分配精力。<span class="fig-note">口径：本站教学归纳。</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p4">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>05</b> · 常见翻车 / WATCH OUT</span><h2 class="h2">最容易摔的这三跤</h2></div>
+    <div class="grid g3 reveal mp-traps"><div class="card tone-teal mp-trap"><span class="num">01</span><h3>别这样</h3><p>追求精确到个位，把速算做成假精确，反而误导决策。</p></div><div class="card tone-blue mp-trap"><span class="num">02</span><h3>别这样</h3><p>把因子藏起来只报一个总数，别人没法帮你挑错。</p></div><div class="card tone-lime mp-trap"><span class="num">03</span><h3>别这样</h3><p>拆完不去查最没把握的那个，估算就一直停在猜。</p></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p5">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>06</b> · 动手试一下 / YOUR TURN</span><h2 class="h2">拉一拉看变化</h2><p class="lead">点一点、勾一勾。小组件只帮你看清思路，不替你做决定，也不算分数。</p></div>
+    <div class="mp-tool" data-mp-tool="slider" data-mn="5" data-mx="40" data-step="5" data-vals="5:150,10:300,15:450,20:600,25:750,30:900,35:1050,40:1200" data-formula="30000 × {v}% × 2 × 5%" data-label="把「会喝咖啡的比例」拉一拉，看周杯数"><input type="range" min="5" max="40" step="5" value="20" aria-label="把「会喝咖啡的比例」拉一拉，看周杯数"><div class="mp-slider-read"><span class="mp-slider-eq"></span><b class="mp-slider-res"></b></div><div class="mp-tool-out" aria-live="polite"></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p6">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
+    <blockquote class="mp-take"><span>“</span>估算的价值不是那个数，是那串能被逐个替换的因子。<span>”</span></blockquote>
+    <div class="mp-credit"><b>归属与口径</b><p>通用工具被这套流程收编、合作开发，或仅能查到二手来源。好用，但别写成「麦肯锡发明」。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p7">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>08</b> · 接着看 / KEEP GOING</span><h2 class="h2">相关的另外三招</h2></div>
+    <div class="grid g3 reveal mp-related"><a class="card tone-teal mp-rel" href="method-s10.html"><span class="num">S10</span><h3>关键驱动 / 80-20</h3><p>只改一件事，改哪件结果动得最多？</p><span class="go">去看这一招</span></a><a class="card tone-teal mp-rel" href="method-s07.html"><span class="num">S07</span><h3>假设驱动</h3><p>我猜答案是哪个？什么结果会让我改主意？</p><span class="go">去看这一招</span></a><a class="card tone-teal mp-rel" href="method-s12.html"><span class="num">S12</span><h3>三角验证 + 反证体检</h3><p>这个结论换一条路查，还站得住吗？</p><span class="go">去看这一招</span></a></div>
+    <nav class="mp-pager" aria-label="招式翻页"><a class="mp-pager-card prev" href="method-s10.html"><span class="mono">← 上一招 · S10</span><b>关键驱动 / 80-20</b></a><a class="mp-pager-mid" href="methods.html"><span class="mono">S11 / 48</span><b>全目录</b></a><a class="mp-pager-card next" href="method-s12.html"><span class="mono">下一招 · S12 →</span><b>三角验证 + 反证体检</b></a></nav>
+  </div>
+</section>
+
+</main>
+<div id="siteFooter"></div>
+<div id="audioSlot"></div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

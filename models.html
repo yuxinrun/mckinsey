@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f4ee">
+<meta name="author" content="鱼心快跑">
+<meta name="description" content="麦肯锡相关模型工具箱：7S 轮盘、三层面增长、GE–麦肯锡九宫格、业务系统、利润树、影响可行性矩阵，含可交互的工具选择器与打分雷达。">
+<title>模型工具箱 | 把话想清楚 · 鱼心快跑</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="models" data-next="practice.html" data-minutes="13">
+<div id="siteNav"></div>
+<main class="readable">
+
+<section class="wrap page-head">
+  <span class="eyebrow"><b>PAGE 03</b> · 模型 / THE TOOLBOX</span>
+  <h1 class="h1">模型工具箱：八个模型，其实是八种问法</h1>
+  <p class="lead">模型不负责给答案，它负责<strong>逼你把该问的问题问完</strong>。这一页把常见的几个摆出来，每个都告诉你「它问什么、长什么样、什么时候用、什么时候别用」，还配了能直接拖、能直接点的交互图。先用选择器挑工具，再往下翻。</p>
+  <div class="page-meta"><span>本页约 13 分钟</span><span>6 张交互图 / 表</span><span>4 个可玩组件</span></div>
+  <div class="toc"><a class="chip" href="#m0">00 选工具</a><a class="chip" href="#m1">01 7S</a><a class="chip" href="#m2">02 三层面</a><a class="chip" href="#m3">03 九宫格</a><a class="chip" href="#m4">04 业务系统</a><a class="chip" href="#m5">05 优先级</a><a class="chip" href="#m6">06 辟谣与局限</a></div>
+  <div class="callout tip" style="margin-bottom:0"><span class="ct">NEW · 这一页只放「精选 6 个」，全站已扩到 48 招</span><p>想看完整清单，去 <a href="methods.html">方法论全集 48 招</a>：可搜可筛、逐条标归属，另有四个分类页各讲透 12 招——<a href="methods-solving.html">解题与分析</a> · <a href="methods-strategy.html">战略与增长</a> · <a href="methods-org.html">组织与运营</a> · <a href="methods-comm.html">表达与沟通</a>。本页保留，是因为这几张交互图值得单独玩一遍。</p></div>
+</section>
+
+<section class="section" id="m0" style="border-top:0;padding-top:30px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><b>00</b> · 选型 / WHICH ONE</span>
+      <h2 class="h2">先别挑模型，先说清楚你哪儿难受</h2>
+      <p class="lead">最常见的错误不是用错模型，是<strong>拿着 7S 去解一个「我没想好要决定什么」的问题</strong>。下面四个小问题，答完直接告诉你该翻到哪一节。</p>
+    </div>
+    <figure class="fig">
+      <div class="fig-head"><span>FIG 01 · 决策树</span><span class="fig-title">从「我卡住了」到「用哪个工具」</span></div>
+      <div class="fig-body">
+        <div class="tree">
+          <span class="tree-root">我现在卡住了</span>
+          <div class="tree-branches">
+            <div class="tree-branch"><h4>连问题都没说清</h4><div class="tree-leaf">→ 问题定义卡 + 七步法第 1 步</div><div class="tree-leaf">→ 议题树 / MECE</div></div>
+            <div class="tree-branch"><h4>有答案，说不明白</h4><div class="tree-leaf">→ 金字塔 + SCQA</div><div class="tree-leaf">→ 一图一事 / 30 秒稿</div></div>
+            <div class="tree-branch"><h4>事太多，做不完</h4><div class="tree-leaf">→ 影响–可行性矩阵</div><div class="tree-leaf">→ 九宫格（有多条业务时）</div></div>
+            <div class="tree-branch"><h4>推不动 / 看不远</h4><div class="tree-leaf">→ 7S（组织没对齐）</div><div class="tree-leaf">→ 三层面（今天与明天打架）</div></div>
+          </div>
+        </div>
+      </div>
+      <figcaption><b>结论：</b>先确认「卡在哪一层」，再拿工具；把模型当答案自动售货机，投币再多也只掉出一张纸。<span class="fig-note">口径：本站把公开框架按使用场景做的归类，非官方分类。</span></figcaption>
+    </figure>
+    <div class="tool no-read">
+      <h4>我该用哪个？四问选择器</h4>
+      <p class="hint">单选，边选边出结果。同分按先选到的算，别把它当判决书，当菜单看。</p>
+      <form id="toolPicker">
+        <div class="field"><label>Q1 · 你现在最难受的是</label><div class="radio-line">
+          <label><input type="radio" name="q1" value="define" checked>问题说不清</label>
+          <label><input type="radio" name="q1" value="priority">事太多不知先做哪个</label></div></div>
+        <div class="field"><label>Q2 · 卡住的地方更像</label><div class="radio-line">
+          <label><input type="radio" name="q2" value="split">想法太乱需要拆</label>
+          <label><input type="radio" name="q2" value="comm" checked>有答案但讲不明白</label></div></div>
+        <div class="field"><label>Q3 · 这件事主要关于</label><div class="radio-line">
+          <label><input type="radio" name="q3" value="org" checked>团队 / 流程推不动</label>
+          <label><input type="radio" name="q3" value="growth">现在和未来的取舍</label></div></div>
+        <div class="field"><label>Q4 · 你希望先拿到</label><div class="radio-line">
+          <label><input type="radio" name="q4" value="split">一张能填的表</label>
+          <label><input type="radio" name="q4" value="comm" checked>一句能说的话</label></div></div>
+      </form>
+      <div class="tool-out" id="pickerOut"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="m1">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><b>01</b> · 7S / 组织体检</span>
+      <h2 class="h2">7S：战略没错，也可能是另外六根在拖后腿</h2>
+      <p class="lead">官网 Enduring Ideas 系列讲得很清楚：7S 在 1970 年代末出现，是一次视角转弯——<strong>从「谁向谁汇报」转向「这些要素有没有对齐」</strong>。三个硬 S（战略、结构、制度）好写也好改，四个软 S（共同价值观、风格、人员、技能）难写，偏偏最常出事。</p>
+    </div>
+    <figure class="fig">
+      <div class="fig-head"><span>FIG 02 · 可交互雷达</span><span class="fig-title">拖动七根滑杆，给自己（或团队）做一次体检</span></div>
+      <div class="fig-body">
+        <div class="radar-wrap">
+          <svg id="radarSvg" class="svg-chart" viewBox="0 0 340 320" role="img" aria-label="七个维度的雷达图，随滑杆变化"></svg>
+          <div>
+            <div class="range-row"><span>战略 Strategy</span><input type="range" id="s0" min="1" max="5" value="4"><b id="sv0">4</b></div>
+            <div class="range-row"><span>结构 Structure</span><input type="range" id="s1" min="1" max="5" value="2"><b id="sv1">2</b></div>
+            <div class="range-row"><span>制度 Systems</span><input type="range" id="s2" min="1" max="5" value="3"><b id="sv2">3</b></div>
+            <div class="range-row"><span>共同价值观</span><input type="range" id="s3" min="1" max="5" value="3"><b id="sv3">3</b></div>
+            <div class="range-row"><span>风格 Style</span><input type="range" id="s4" min="1" max="5" value="2"><b id="sv4">2</b></div>
+            <div class="range-row"><span>人员 Staff</span><input type="range" id="s5" min="1" max="5" value="4"><b id="sv5">4</b></div>
+            <div class="range-row"><span>技能 Skills</span><input type="range" id="s6" min="1" max="5" value="3"><b id="sv6">3</b></div>
+          </div>
+        </div>
+        <div class="tool-out" id="radarOut"></div>
+      </div>
+      <figcaption><b>结论：</b>不必七项全满分；看的是形状——一根特别短，其他六根再漂亮也容易被它拽住。<span class="fig-note">口径：打分为你自己的主观判断，非测评工具、无信效度依据；7S 名称依据官网 Enduring Ideas 与公开资料。</span></figcaption>
+    </figure>
+    <div class="callout tip"><span class="ct">TIP · 生活版 7S</span><p>把「组织」换成「你家的周末」：战略=想去哪儿，结构=谁负责订票，制度=几点出门，共同价值观=别太赶，风格=谁来拍板，人员=谁体力够，技能=会不会看地图。<strong>七项里只要「几点出门」没对齐，其余六项写得再美也会在门口吵起来。</strong></p></div>
+  </div>
+</section>
+
+<section class="section" id="m2">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><b>02</b> · 三层面 / THREE HORIZONS</span>
+      <h2 class="h2">三层面增长：别等饭碗见底了才想起种地</h2>
+      <p class="lead">官网 Enduring Ideas 里，Steve Coley 把这个框架讲成一句话：<strong>一边管好今天的业绩，一边给明天留机会</strong>。H1 是现有核心业务，H2 是正在长起来的新业务，H3 是更远的种子与期权。它出自 1990 年代关于持续增长的研究（常见引用是《The Alchemy of Growth》）。</p>
+    </div>
+    <figure class="fig">
+      <div class="fig-head"><span>FIG 03 · 曲线图</span><span class="fig-title">三条 S 曲线必须同时在线</span></div>
+      <div class="fig-body">
+        <svg class="svg-chart" viewBox="0 0 720 250" role="img" aria-label="三条错开时间的增长曲线，以及资源分配条形图">
+          <line x1="40" y1="210" x2="700" y2="210" class="axis"/>
+          <line x1="40" y1="40" x2="700" y2="40" class="gridline"/>
+          <line x1="40" y1="125" x2="700" y2="125" class="gridline"/>
+          <line x1="260" y1="20" x2="260" y2="210" class="gridline"/>
+          <line x1="470" y1="20" x2="470" y2="210" class="gridline"/>
+          <path d="M60 182 C140 150 175 95 260 88 C370 80 500 110 690 132" fill="none" stroke="var(--accent)" stroke-width="3"/>
+          <path d="M240 206 C330 200 375 120 470 96 C560 76 625 82 690 90" fill="none" stroke="var(--blue)" stroke-width="3"/>
+          <path d="M470 206 C560 200 605 118 690 66" fill="none" stroke="var(--lime)" stroke-width="3"/>
+          <text x="70" y="72" style="fill:var(--accent)">H1 现有主业</text>
+          <text x="300" y="66" style="fill:var(--blue)">H2 新兴业务</text>
+          <text x="560" y="52" style="fill:var(--lime)">H3 种子</text>
+          <text x="40" y="232">今天</text><text x="240" y="232">2–5 年</text><text x="450" y="232">更远</text>
+          <text x="640" y="232">时间 →</text>
+        </svg>
+        <div class="bars" style="margin-top:10px">
+          <div class="bar-row"><span class="bar-label">H1 守住今天</span><div class="bar-track"><div class="bar-fill teal" data-w="70%"></div></div><span class="bar-val">70%</span></div>
+          <div class="bar-row"><span class="bar-label">H2 长明天的饭碗</span><div class="bar-track"><div class="bar-fill blue" data-w="25%"></div></div><span class="bar-val">25%</span></div>
+          <div class="bar-row"><span class="bar-label">H3 留几颗种子</span><div class="bar-track"><div class="bar-fill lime" data-w="5%"></div></div><span class="bar-val">5%</span></div>
+        </div>
+      </div>
+      <figcaption><b>结论：</b>三条曲线要同时管，且 H3 常常只有很小的资源——正因为小，才最容易被「这周先忙完再说」挤掉。<span class="fig-note">口径：三条曲线与 70/25/5 均为本站示意，不是官方建议比例，也不是任何公司的真实资源分配；年份区间为常见二手说法，本站不主张固定年限。</span></figcaption>
+    </figure>
+    <div class="quote"><strong>换成你自己：</strong>H1 是现在这份工作里最拿手的活，H2 是正在学、已经开始能换钱的本事，H3 是纯粹好奇、暂时不指望回报的东西。一个健康的组合不是「辞职去追梦」，而是<strong>别让 H1 忙到把 H2 和 H3 全挤没了</strong>。周末两小时，就够当种子了。</div>
+  </div>
+</section>
+
+<section class="section" id="m3">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><b>03</b> · 九宫格 / NINE-BOX</span>
+      <h2 class="h2">GE–麦肯锡九宫格：钱该往哪条业务上放</h2>
+      <p class="lead">官网 Enduring Ideas 把它定义为「多业务公司在不同业务单元间排定投资优先级的系统方法」。两根轴：<strong>行业吸引力</strong>（外面这盘生意值不值得做）与<strong>业务实力</strong>（我们自己做不做得过别人）。注意名字——它是 1970 年代 GE 与麦肯锡<strong>合作</strong>开发的，别叫成「麦肯锡独创」。</p>
+    </div>
+    <figure class="fig">
+      <div class="fig-head"><span>FIG 04 · 可交互九宫格</span><span class="fig-title">选两个维度，或直接点格子</span></div>
+      <div class="fig-body">
+        <div class="field-grid" style="margin-bottom:16px">
+          <div class="field" style="margin:0"><label for="attract">行业吸引力</label><select id="attract"><option value="0">高</option><option value="1" selected>中</option><option value="2">低</option></select></div>
+          <div class="field" style="margin:0"><label for="strength">自身业务实力</label><select id="strength"><option value="0">强</option><option value="1" selected>中</option><option value="2">弱</option></select></div>
+        </div>
+        <div class="matrix3" id="nineBox"></div>
+        <div class="tool-out" id="nineOut"></div>
+      </div>
+      <figcaption><b>结论：</b>九宫格的价值不是那个格，而是逼你把「我觉得这个有前途」拆成两个能各自打分、能被追问的问题。<span class="fig-note">口径：轴与用途依据官网 Enduring Ideas；绿/黄/区域为本站教学着色，评分完全来自你的判断，不构成投资建议。</span></figcaption>
+    </figure>
+    <p>生活版也成立：把「三条副业」或「三个想学的方向」放进去，一根轴写「这事儿本身有没有需求」，另一根写「我现在的本事够不够」。你会很快发现，最纠结的那一项常常落在「选择性维持」——那就给它设个检查点，而不是今天就要么 All in 要么放弃。</p>
+  </div>
+</section>
+
+<section class="section" id="m4">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><b>04</b> · 业务系统 / BUSINESS SYSTEM</span>
+      <h2 class="h2">业务系统与利润树：把「不赚钱」拆到能动手的地方</h2>
+      <p class="lead">「业务系统」是常被拿来和 Porter 的价值链对照讲的一套分解：把公司从选品到交付切成一串环节，逐个问「这一环能不能更快、更省、更稳」。再配一棵<strong>利润树</strong>，把财务结果拆成可以天天看、天天改的运营变量。</p>
+    </div>
+    <figure class="fig">
+      <div class="fig-head"><span>FIG 05 · 流程 + 树</span><span class="fig-title">先顺着环节找，再顺着公式拆</span></div>
+      <div class="fig-body">
+        <div class="flow">
+          <div class="flow-step teal"><span class="no">01</span><h4>选品 / 研发</h4><p>做对了没有</p></div>
+          <div class="flow-step teal"><span class="no">02</span><h4>采购</h4><p>买贵了没有</p></div>
+          <div class="flow-step blue"><span class="no">03</span><h4>生产 / 出餐</h4><p>卡在哪一步</p></div>
+          <div class="flow-step blue"><span class="no">04</span><h4>渠道 / 触达</h4><p>人看得见吗</p></div>
+          <div class="flow-step lime"><span class="no">05</span><h4>销售 / 转化</h4><p>看了会买吗</p></div>
+          <div class="flow-step coral"><span class="no">06</span><h4>服务 / 复购</h4><p>买过还来吗</p></div>
+        </div>
+        <div class="tree" style="margin-top:20px">
+          <span class="tree-root">利润 = 收入 − 成本</span>
+          <div class="tree-branches">
+            <div class="tree-branch"><h4>收入</h4><div class="tree-leaf">路过人数 × 进店率</div><div class="tree-leaf">× 购买率 × 客单价</div><div class="tree-leaf">× 复购次数</div></div>
+            <div class="tree-branch"><h4>变动成本</h4><div class="tree-leaf">原料 × 用量</div><div class="tree-leaf">损耗率</div><div class="tree-leaf">每单履约成本</div></div>
+            <div class="tree-branch"><h4>固定成本</h4><div class="tree-leaf">房租 / 设备</div><div class="tree-leaf">人力</div><div class="tree-leaf">其他固定开销</div></div>
+          </div>
+        </div>
+      </div>
+      <figcaption><b>结论：</b>「不赚钱」不是一个问题，是至少九个；树拆到这一层，每个叶子都能对应一个今天下午就能去查的数字。<span class="fig-note">口径：环节与公式为本站以小店为例的简化示意；「业务系统与 Porter 价值链的区分」属常见二手讲法（事实库 B6），不是官方定义。真实经营请以会计口径为准。</span></figcaption>
+    </figure>
+    <div class="callout info"><span class="ct">INFO · Calculator 在下一页</span><p>这棵树的每个叶子都能变成一个输入框。<a href="practice.html">实操页第 5 步</a> 有个小计算器，改一个数字就能看到日利润怎么动，还能告诉你「同样涨 10%，调哪根杠杆最值钱」。</p></div>
+  </div>
+</section>
+
+<section class="section" id="m5">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><b>05</b> · 优先级 / 2×2</span>
+      <h2 class="h2">影响–可行性矩阵：四格，决定今天先干哪件</h2>
+      <p class="lead">两个问题叠起来就是一张图：<strong>这件事做成了影响有多大？做成它有多难？</strong>点一下格子，看看对应的行动建议。</p>
+    </div>
+    <figure class="fig">
+      <div class="fig-head"><span>FIG 06 · 可交互 2×2</span><span class="fig-title">点一个格子，看它该被怎么对待</span></div>
+      <div class="fig-body">
+        <div class="matrix2" id="impactMatrix">
+          <div class="ax"></div><div class="ax">可行性低</div><div class="ax">可行性高</div>
+          <div class="ax">影响大</div>
+          <div class="q2" data-q="q2"><b>拆小再做</b><span>影响大但难：先做一个最小验证，别一上来写三个月计划。</span></div>
+          <div class="q2 on" data-q="q1"><b>立即做</b><span>影响大又容易：今天下午就能动手的，通常就是这一格。</span></div>
+          <div class="ax">影响小</div>
+          <div class="q2" data-q="q4"><b>先别做</b><span>又难又不划算：写进「以后再说」，比硬扛诚实。</span></div>
+          <div class="q2" data-q="q3"><b>顺手做</b><span>容易但影响小：放在零碎时间，别占掉黄金两小时。</span></div>
+        </div>
+        <div class="tool-out" id="matrixOut"><b>立即做：</b>影响大、又容易，别把它排在会后。今天下午就能动手的，通常就是这一格。</div>
+      </div>
+      <figcaption><b>结论：</b>排序的意义一半在「先做什么」，另一半在<strong>公开宣布这次不做什么</strong>——后者更能救你的周末。<span class="fig-note">口径：本站通用优先级示意，非麦肯锡官方模板；格内建议为通俗化改写。</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="m6">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><b>06</b> · 辟谣与局限 / CAVEATS</span>
+      <h2 class="h2">别叫错爹，也别把模型当圣旨</h2>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>模型</th><th>更准确的说法</th><th>分级</th><th>它能问 / 不能答</th></tr></thead>
+        <tbody>
+          <tr><td>7S 框架</td><td>1970 年代末麦肯锡内部提出，官网有 Enduring Ideas 专文</td><td><span class="badge a">A</span></td><td>问「哪里没对齐」；不答「该裁谁」</td></tr>
+          <tr><td>三层面增长</td><td>1990 年代持续增长研究，官网有 Enduring Ideas 专文</td><td><span class="badge a">A</span></td><td>问「今天与明天怎么同时管」；不答「该投多少钱」</td></tr>
+          <tr><td>GE–麦肯锡九宫格</td><td>1970 年代 GE 与麦肯锡合作，官网有专文</td><td><span class="badge b">B</span></td><td>问「优先级怎么排」；不答「市场一定涨」</td></tr>
+          <tr><td>MECE / 金字塔原理</td><td>Barbara Minto 在麦肯锡期间提出并写入其著作</td><td><span class="badge a">A</span></td><td>问「分类与表达是否清楚」；不答「内容对不对」</td></tr>
+          <tr><td>业务系统 vs 价值链</td><td>两者常被区分讲，但与 Porter 价值链的严格界线属二手讲法</td><td><span class="badge b">B</span></td><td>问「哪一环有问题」；不替代财务核算</td></tr>
+          <tr><td>五力 / 价值链 / BCG 矩阵</td><td><strong>不是麦肯锡的</strong>：前两者属 Porter，后者属 BCG</td><td><span class="badge a">A</span></td><td>各有各的用途，别混进「麦肯锡十大模型」</td></tr>
+          <tr><td>SWOT / 80-20</td><td>来源各有说法，均未见麦肯锡官方主张发明</td><td><span class="badge c">C</span></td><td>当通用经验法则用，别当考据结论</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid g3 reveal" style="margin-top:20px">
+      <div class="card tone-coral"><span class="num">01</span><h3>模型会简化现实</h3><p>两根轴装不下真实世界的全部。模型给的从来不是答案，是一份「还该问什么」的清单。</p></div>
+      <div class="card tone-coral"><span class="num">02</span><h3>模型吃输入</h3><p>打分是拍脑袋，输出就是精装版拍脑袋。先花时间把输入查实，比换一个更高级的模型有用。</p></div>
+      <div class="card tone-coral"><span class="num">03</span><h3>模型会过期</h3><p>1970 年代的组织框架，遇到远程协作与 AI 工具要重新解释；框架活得久，不等于每个结论都还成立。</p></div>
+    </div>
+    <div class="band" style="margin-top:30px">
+      <span class="eyebrow">VIEWPOINT · 观点</span>
+      <h2>模型是提问的机器，不是答案的自动售货机</h2>
+      <p class="lead">一个模型用得好不好，不看图画得漂不漂亮，看它有没有让你问出三个昨天没想到的问题。问出来了，哪怕最后把它扔掉，也值回票价。</p>
+      <div class="band-grid">
+        <div class="band-card"><h4>用之前</h4><p>先说清「我要决定什么」，再挑工具。</p></div>
+        <div class="band-card"><h4>用之中</h4><p>每个格子都追一句「凭什么这么打分」。</p></div>
+        <div class="band-card"><h4>用之后</h4><p>把结论写成一句能被反驳的话，而不是一张图。</p></div>
+        <div class="band-card"><h4>用不上时</h4><p>放回去。工具箱里最贵的能力，是知道这次不用工具。</p></div>
+      </div>
+    </div>
+    <div class="disclaimer"><b>免责与出口：</b>本页所有交互工具仅用于演示思路，输入不会被上传或保存，输出不构成测评、投资、经营或职业建议；示意数字不是调研数据，也不是任何官方比例。模型归属与年份以官网 Enduring Ideas 及原书为准，标 B/C 的条目请交叉核对。涉及金额、合同、人事与税务的决定，请找相应执业专业人士并核对一手资料。</div>
+  </div>
+</section>
+
+</main>
+<div id="siteFooter"></div>
+<div id="audioSlot"></div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

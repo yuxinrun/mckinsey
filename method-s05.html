@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f4ee">
+<meta name="author" content="鱼心快跑">
+<meta name="description" content="假设树（S05）通俗详解：先猜一个答案，再倒过来列「要成立，最少得同时满足哪几件事」。 含图表拆解、三步上手、咖啡摊算例与常见翻车。">
+<title>假设树 · S05 | 把话想清楚 · 鱼心快跑</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="m-s05" data-next="method-s06.html" data-minutes="5" data-cat="solving" data-no="S05">
+<div id="siteNav"></div>
+<main class="readable mp-page tone-teal">
+
+<section class="wrap mp-hero">
+  <nav class="mp-crumb" aria-label="面包屑"><a href="index.html">首页</a><span>/</span><a href="methods.html">48 招全集</a><span>/</span><a href="methods-solving.html">解题与分析</a><span>/</span><b>S05</b></nav>
+  <div class="mp-hero-top"><span class="mp-no">S05</span><span class="cat-tag solving">解题</span><span class="badge b">B</span></div>
+  <h1 class="mp-title">假设树</h1>
+  <p class="mp-en mono">HYPOTHESIS TREE / WHY TREE</p>
+  <p class="mp-ask">要证明这个猜想，最少需要哪几块证据？</p>
+  <p class="mp-plain">先猜一个答案，再倒过来列「要成立，最少得同时满足哪几件事」。</p>
+  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>B · 需带限定词</span><span>第 5 / 48 招</span></div>
+  <div class="mp-keywords"><span class="mp-kw"># Why 树</span><span class="mp-kw"># 反证</span><span class="mp-kw"># 必要且足够</span><span class="mp-kw"># 先猜后验</span></div>
+</section>
+
+<section class="section mp-sec" id="p1" style="border-top:0;padding-top:28px">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>01</b> · 先看图 / THE PICTURE</span><h2 class="h2">一张图，先把这招的样子看明白</h2></div>
+    <figure class="fig mp-fig"><div class="fig-head"><span>FIG 01 · 论证树</span><span class="fig-title">一个猜想，三根必须同时成立的支撑</span></div><div class="fig-body"><div class="tree"><span class="tree-root">猜想：延长营业时间能多赚钱</span><div class="tree-branches"><span class="tree-leaf"><b>① 有人</b><span>14–16 点路过人数 ≥ 上午（实蹲可数）</span></span><span class="tree-leaf"><b>② 会买</b><span>该时段购买率 ≥ 8%（实蹲可数）</span></span><span class="tree-leaf"><b>③ 划算</b><span>增量毛利 &gt; 新增人工 60 元（可算）</span></span></div></div></div><figcaption><b>结论：</b>三根是「且」不是「或」：任意一根倒，结论就不成立，所以先查最脆的那根。<span class="fig-note">口径：数字为教学示意，用于说明结构，不代表真实客流或收益。</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p2">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
+    <div class="mp-core"><p>假设树回答的是 <strong>Why / 凭什么</strong>：把猜想写在顶端，下面挂三条「必要且足够」的支撑。它跟议题树方向相反——议题树从问题往下拆，假设树从答案往下拆；前者怕漏，后者怕<strong>只找支持自己的证据</strong>。</p><p>三条支撑要写成<strong>能被反驳</strong>的句子。「我们服务好」不算，「老客复购率高于 40%」才算。然后专门去找能推翻它的那一条，找不到，才有资格说结论稳。</p></div>
+    <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>把猜想写成一句明确、能被反驳的话。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>列出三条「必要且足够」的支撑，每条都能查。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>先查最可能推翻整棵树的那一支。</p></div></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p3">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
+    <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>猜想：「延长营业时间能多赚钱」。三根支撑：① 下午 <em class="mp-hl">2–4 点</em>路过人数不少于上午（可数）；② 这批人里买咖啡的比例不低于 <em class="mp-hl">8%</em>（可数）；③ 多开两小时的增量毛利大于<em class="mp-hl">新增人工 60 元</em>（可算）。先查第 ① 支：蹲一下午，发现路过人数只有上午的<em class="mp-hl">两成</em>。<strong>一支倒，整棵树就不用查了</strong>——省下两天，还避免了一次亏本尝试。</p></div>
+    <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 正反对照</span><span class="fig-title">假设树 vs 议题树</span></div><div class="fig-body"><div class="mp-compare"><div class="mp-cmp-col bad"><b>议题树（还不知道答案）</b><span>从问句往下拆</span><span>问「由哪几部分构成」</span><span>怕漏，要 MECE</span><span>适合刚接手</span></div><div class="mp-cmp-col good"><b>假设树（已有猜想）</b><span>从答案往下拆</span><span>问「凭什么成立」</span><span>怕偏，要能反驳</span><span>适合已摸过一轮</span></div></div></div><figcaption><b>结论：</b>选错方向不会立刻出错，但会让你查一堆用不上的数据。<span class="fig-note">口径：两类树的对比为本站教学归纳。</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p4">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>05</b> · 常见翻车 / WATCH OUT</span><h2 class="h2">最容易摔的这三跤</h2></div>
+    <div class="grid g3 reveal mp-traps"><div class="card tone-teal mp-trap"><span class="num">01</span><h3>别这样</h3><p>只列支持自己的论据，那叫辩护，不叫验证。</p></div><div class="card tone-blue mp-trap"><span class="num">02</span><h3>别这样</h3><p>把支撑写成「体验更好」这种没法反驳的话，查什么都算对。</p></div><div class="card tone-lime mp-trap"><span class="num">03</span><h3>别这样</h3><p>假设被推翻后偷偷改口，把这次验证记成「一开始就猜对了」。</p></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p5">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>06</b> · 动手试一下 / YOUR TURN</span><h2 class="h2">勾选自检</h2><p class="lead">点一点、勾一勾。小组件只帮你看清思路，不替你做决定，也不算分数。</p></div>
+    <div class="mp-tool" data-mp-tool="check"><div class="mp-check-list"><label class="mp-check-row"><input type="checkbox"><span>猜想写成了一句能被反驳的话</span><i>✓</i></label><label class="mp-check-row"><input type="checkbox"><span>每条支撑都写成了可查的数字或事实</span><i>✓</i></label><label class="mp-check-row"><input type="checkbox"><span>至少认真找过一条反证</span><i>✓</i></label><label class="mp-check-row"><input type="checkbox"><span>接受「猜错」也算成果</span><i>✓</i></label></div><div class="mp-tool-out" aria-live="polite">勾一勾，看这一招你差哪一步。</div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p6">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
+    <blockquote class="mp-take"><span>“</span>被推翻的假设也是成果：它帮你划掉一整片不用再看的地方。<span>”</span></blockquote>
+    <div class="mp-credit"><b>归属与口径</b><p>通用工具被这套流程收编、合作开发，或仅能查到二手来源。好用，但别写成「麦肯锡发明」。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p7">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>08</b> · 接着看 / KEEP GOING</span><h2 class="h2">相关的另外三招</h2></div>
+    <div class="grid g3 reveal mp-related"><a class="card tone-teal mp-rel" href="method-s07.html"><span class="num">S07</span><h3>假设驱动</h3><p>我猜答案是哪个？什么结果会让我改主意？</p><span class="go">去看这一招</span></a><a class="card tone-teal mp-rel" href="method-s04.html"><span class="num">S04</span><h3>议题树</h3><p>大问题能切成哪几块可以分头查的小问题？</p><span class="go">去看这一招</span></a><a class="card tone-teal mp-rel" href="method-s12.html"><span class="num">S12</span><h3>三角验证 + 反证体检</h3><p>这个结论换一条路查，还站得住吗？</p><span class="go">去看这一招</span></a></div>
+    <nav class="mp-pager" aria-label="招式翻页"><a class="mp-pager-card prev" href="method-s04.html"><span class="mono">← 上一招 · S04</span><b>议题树</b></a><a class="mp-pager-mid" href="methods.html"><span class="mono">S05 / 48</span><b>全目录</b></a><a class="mp-pager-card next" href="method-s06.html"><span class="mono">下一招 · S06 →</span><b>是否树</b></a></nav>
+  </div>
+</section>
+
+</main>
+<div id="siteFooter"></div>
+<div id="audioSlot"></div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

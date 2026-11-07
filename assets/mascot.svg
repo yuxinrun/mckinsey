@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="戴着圆眼镜、拿指示棒讲解金字塔图表的青色小鱼">
+  <g stroke="#0E201C" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M158 210 L44 118 L64 210 L44 302 Z" fill="#0A958A"/>
+    <path d="M242 106 L292 48 L342 100 Z" fill="#0A958A"/>
+    <path d="M246 312 L288 366 L332 318 Z" fill="#0A958A"/>
+    <path d="M156 210 C156 124 238 82 326 92 C414 102 462 158 462 210 C462 262 414 318 326 328 C238 338 156 296 156 210 Z" fill="#35D8C4"/>
+    <path d="M186 258 C240 306 342 316 414 262" fill="none" stroke="#0A958A" stroke-width="12" opacity=".55"/>
+    <path d="M300 326 L286 382 L326 350 L352 382 L344 320 Z" fill="#E85734"/>
+    <circle cx="352" cy="182" r="33" fill="#FFFDF8" opacity=".82"/>
+    <circle cx="420" cy="182" r="25" fill="#FFFDF8" opacity=".82"/>
+    <path d="M385 180 H395" fill="none"/>
+    <circle cx="356" cy="184" r="9" fill="#0E201C" stroke="none"/>
+    <path d="M392 238 Q412 254 432 234" fill="none"/>
+    <path d="M448 268 L520 214" fill="none" stroke="#0E201C" stroke-width="7"/>
+    <g stroke-width="7">
+      <path d="M512 108 L566 108 L552 158 L526 158 Z" fill="#35D8C4"/>
+      <path d="M500 172 L578 172 L590 224 L488 224 Z" fill="#A9CC3F"/>
+      <path d="M484 238 L594 238 L616 296 L462 296 Z" fill="#E85734"/>
+      <path d="M462 312 H616" fill="none" stroke="#0E201C" stroke-dasharray="12 12"/>
+    </g>
+  </g>
+</svg>

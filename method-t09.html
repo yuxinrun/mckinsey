@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f4ee">
+<meta name="author" content="鱼心快跑">
+<meta name="description" content="决策树与期权思维（T09）通俗详解：把大决定拆成一串小决定，每一步都留一个「可以改主意」的口子。 含图表拆解、三步上手、咖啡摊算例与常见翻车。">
+<title>决策树与期权思维 · T09 | 把话想清楚 · 鱼心快跑</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="m-t09" data-next="method-t10.html" data-minutes="5" data-cat="strategy" data-no="T09">
+<div id="siteNav"></div>
+<main class="readable mp-page tone-blue">
+
+<section class="wrap mp-hero">
+  <nav class="mp-crumb" aria-label="面包屑"><a href="index.html">首页</a><span>/</span><a href="methods.html">48 招全集</a><span>/</span><a href="methods-strategy.html">战略与增长</a><span>/</span><b>T09</b></nav>
+  <div class="mp-hero-top"><span class="mp-no">T09</span><span class="cat-tag strategy">战略</span><span class="badge b">B</span></div>
+  <h1 class="mp-title">决策树与期权思维</h1>
+  <p class="mp-en mono">DECISION TREE / REAL OPTIONS</p>
+  <p class="mp-ask">这一步走错了，还能退回来吗？</p>
+  <p class="mp-plain">把大决定拆成一串小决定，每一步都留一个「可以改主意」的口子。</p>
+  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>B · 需带限定词</span><span>第 21 / 48 招</span></div>
+  <div class="mp-keywords"><span class="mp-kw"># 可逆</span><span class="mp-kw"># 分阶段</span><span class="mp-kw"># 信息价值</span><span class="mp-kw"># 止损</span></div>
+</section>
+
+<section class="section mp-sec" id="p1" style="border-top:0;padding-top:28px">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>01</b> · 先看图 / THE PICTURE</span><h2 class="h2">一张图，先把这招的样子看明白</h2></div>
+    <figure class="fig mp-fig"><div class="fig-head"><span>FIG 01 · 决策树</span><span class="fig-title">先租后买：把不可逆的一步往后推</span></div><div class="fig-body"><div class="tree"><span class="tree-root">要不要花 8000 元买新磨豆机？</span><div class="tree-branches"><span class="tree-leaf"><b>第一步（可逆）</b><span>花 200 元租两个周末，顺便数客流</span></span><span class="tree-leaf"><b>达标 →</b><span>每天多卖 ≥40 杯 → 再买</span></span><span class="tree-leaf"><b>不达标 →</b><span>到此为止，损失止于 200 元</span></span></div></div></div><figcaption><b>结论：</b>200 元买到的不是设备，是「要不要花 8000」的答案。<span class="fig-note">口径：金额与杯数为教学示意，不是收益预测。</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p2">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
+    <div class="mp-core"><p>决策树把选择画成：决策点 → 可能结果 → 下一个决策点。配上概率和收益，能算出「现在该不该投」；但更实用的是<strong>期权思维</strong>：优先选那些<strong>可逆、可分阶段、还能学到东西</strong>的动作，把不可逆的大额承诺往后推。</p><p>判断标准就一句：<strong>这步的信息值多少钱</strong>。花小钱先买到一个能改变后续判断的信息，往往比一次性押注划算。反过来，可逆的小决定别开三个月会，直接做。</p></div>
+    <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>把决定画成两三步，标出哪一步是不可逆的。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>给每个结果标「能学到什么」和「退回来要付多少」。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>把不可逆那步往后推，前面插一个便宜的验证。</p></div></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p3">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
+    <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>摊主想花 <em class="mp-hl">8000 元</em>买一台新磨豆机，理由是「下午人多」。这是<strong>不可逆</strong>的一步（二手折价大）。改成分两步：先花 <em class="mp-hl">200 元</em>租一台试<em class="mp-hl">两个周末</em>，同时数清下午真实客量；若每天多卖<em class="mp-hl">40 杯</em>以上再买。租机器那 200 元不是成本，是<strong>买了一份「要不要花 8000」的信息</strong>。若数据不支持，损失就止在 200。</p></div>
+    <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 正反对照</span><span class="fig-title">两种下注方式</span></div><div class="fig-body"><div class="mp-compare"><div class="mp-cmp-col bad"><b>一次性押注</b><span>先花 8000 元买设备</span><span>事后才知道客量够不够</span><span>不合适也难脱手</span><span>现金流被锁住</span></div><div class="mp-cmp-col good"><b>分阶段 + 留期权</b><span>先花 200 元租两周</span><span>同时把客量数清楚</span><span>达标才买，不达标就停</span><span>最坏损失 200 元</span></div></div></div><figcaption><b>结论：</b>期权思维不保证赚更多，但保证「猜错时少亏很多」。<span class="fig-note">口径：教学示意。</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p4">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>05</b> · 常见翻车 / WATCH OUT</span><h2 class="h2">最容易摔的这三跤</h2></div>
+    <div class="grid g3 reveal mp-traps"><div class="card tone-teal mp-trap"><span class="num">01</span><h3>别这样</h3><p>把可逆的小决定当大决定，开会三周，机会成本比试一次还高。</p></div><div class="card tone-blue mp-trap"><span class="num">02</span><h3>别这样</h3><p>只算收益不算「退出来的代价」，被设备、长约、库存绑住。</p></div><div class="card tone-lime mp-trap"><span class="num">03</span><h3>别这样</h3><p>决策树画满概率却全是拍脑袋的数，精度是假的。</p></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p5">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>06</b> · 动手试一下 / YOUR TURN</span><h2 class="h2">一题小测</h2><p class="lead">点一点、勾一勾。小组件只帮你看清思路，不替你做决定，也不算分数。</p></div>
+    <div class="mp-tool" data-mp-tool="quiz"><p class="mp-quiz-q">面对不可逆的大额决定，期权思维建议先做什么？</p><div class="mp-quiz-opts"><button type="button" class="mp-quiz-opt" data-ok="0">多开几次会统一意见</button><button type="button" class="mp-quiz-opt" data-ok="1">插一个便宜、可逆、还能学到信息的验证</button><button type="button" class="mp-quiz-opt" data-ok="0">等竞争对手先试</button><button type="button" class="mp-quiz-opt" data-ok="0">一次到位，省得麻烦</button></div><div class="mp-tool-out" aria-live="polite"></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p6">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
+    <blockquote class="mp-take"><span>“</span>能退回来的先做，退不回来的往后放。<span>”</span></blockquote>
+    <div class="mp-credit"><b>归属与口径</b><p>通用工具被这套流程收编、合作开发，或仅能查到二手来源。好用，但别写成「麦肯锡发明」。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p7">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>08</b> · 接着看 / KEEP GOING</span><h2 class="h2">相关的另外三招</h2></div>
+    <div class="grid g3 reveal mp-related"><a class="card tone-blue mp-rel" href="method-t08.html"><span class="num">T08</span><h3>情景分析与三种战略姿态</h3><p>如果未来不止一种，我现在该下注还是留后路？</p><span class="go">去看这一招</span></a><a class="card tone-blue mp-rel" href="method-t07.html"><span class="num">T07</span><h3>不确定性四层级</h3><p>我连「不知道什么」都说得清吗？</p><span class="go">去看这一招</span></a><a class="card tone-blue mp-rel" href="method-t10.html"><span class="num">T10</span><h3>战略大动作 / 概率化战略</h3><p>预算是不是又平均分了？敢不敢做个大动作？</p><span class="go">去看这一招</span></a></div>
+    <nav class="mp-pager" aria-label="招式翻页"><a class="mp-pager-card prev" href="method-t08.html"><span class="mono">← 上一招 · T08</span><b>情景分析与三种战略姿态</b></a><a class="mp-pager-mid" href="methods.html"><span class="mono">T09 / 48</span><b>全目录</b></a><a class="mp-pager-card next" href="method-t10.html"><span class="mono">下一招 · T10 →</span><b>战略大动作 / 概率化战略</b></a></nav>
+  </div>
+</section>
+
+</main>
+<div id="siteFooter"></div>
+<div id="audioSlot"></div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

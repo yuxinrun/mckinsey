@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f4ee">
+<meta name="author" content="鱼心快跑">
+<meta name="description" content="优先级剪枝 / 影响–可行性矩阵（S08）通俗详解：九片叶子只查两片，而且把「这次不看什么」写下来、说出去。 含图表拆解、三步上手、咖啡摊算例与常见翻车。">
+<title>优先级剪枝 / 影响–可行性矩阵 · S08 | 把话想清楚 · 鱼心快跑</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="m-s08" data-next="method-s09.html" data-minutes="5" data-cat="solving" data-no="S08">
+<div id="siteNav"></div>
+<main class="readable mp-page tone-teal">
+
+<section class="wrap mp-hero">
+  <nav class="mp-crumb" aria-label="面包屑"><a href="index.html">首页</a><span>/</span><a href="methods.html">48 招全集</a><span>/</span><a href="methods-solving.html">解题与分析</a><span>/</span><b>S08</b></nav>
+  <div class="mp-hero-top"><span class="mp-no">S08</span><span class="cat-tag solving">解题</span><span class="badge b">B</span></div>
+  <h1 class="mp-title">优先级剪枝 / 影响–可行性矩阵</h1>
+  <p class="mp-en mono">PRIORITIZE &amp; PRUNE</p>
+  <p class="mp-ask">哪两支值得查？哪几支这次公开宣布不看？</p>
+  <p class="mp-plain">九片叶子只查两片，而且把「这次不看什么」写下来、说出去。</p>
+  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>B · 需带限定词</span><span>第 8 / 48 招</span></div>
+  <div class="mp-keywords"><span class="mp-kw"># 剪枝</span><span class="mp-kw"># 不看清单</span><span class="mp-kw"># 影响</span><span class="mp-kw"># 可行性</span></div>
+</section>
+
+<section class="section mp-sec" id="p1" style="border-top:0;padding-top:28px">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>01</b> · 先看图 / THE PICTURE</span><h2 class="h2">一张图，先把这招的样子看明白</h2></div>
+    <figure class="fig mp-fig"><div class="fig-head"><span>FIG 01 · 四象限</span><span class="fig-title">影响 × 可行性：九片叶子往哪四格放</span></div><div class="fig-body"><div class="mp-matrix"><span class="mp-axis-y">影响 ↑</span><div class="mp-matrix-grid"><div class="mp-quad q1"><b>立即查</b><span>营业时间、定价：影响大又查得动</span></div><div class="mp-quad q2"><b>拆小再查</b><span>外卖平台：影响大，先做最小验证</span></div><div class="mp-quad q3"><b>顺手查</b><span>音乐、招牌：容易但不改变决定</span></div><div class="mp-quad q4"><b>这次不看</b><span>装修、供应商：写明重启条件</span></div></div><span class="mp-axis-x">可行性 →</span></div></div><figcaption><b>结论：</b>右上和左下都不会真正改变决定；预算应该只花在左上与左下的最小验证上。<span class="fig-note">口径：打分与象限归置为本站教学示意，不是调研结论。</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p2">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
+    <div class="mp-core"><p>两根轴：<strong>影响</strong>（查清了会不会改变决定）和<strong>可行性</strong>（今天下午查得动吗）。每支打 1–5 分，只留最高的两支，其余剪掉。剪枝的重点不是「偷偷跳过」，而是<strong>公开宣布</strong>——写进清单、发给大家，避免两周后有人问「那个是不是还没看」。</p><p>「影响」这一轴最容易被忽略：很多分支查清了也<strong>不改变任何决定</strong>，那就不该查。判断标准很直接——假设这一支查出来是 A 或 B，你我会做不同的事吗？不会，就砍。</p></div>
+    <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>给每支按影响、可行性各打 1–5 分。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>只留乘积最高的两支，其余写进「这次不看」清单。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>把这份清单发出去，附上「什么情况下会重新打开」。</p></div></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p3">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
+    <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>议题树切出 <em class="mp-hl">9 片</em>叶子：菜单、定价、装修、音乐、会员卡、外卖、营业时间、豆子供应商、招牌。打分后只剩两支——<strong>营业时间</strong>（影响 5 × 可行 5）与<strong>定价</strong>（4 × 4）。「装修」影响或许不低，但这学期不改店面（可行性 1），剪掉并写明：「若续租成功再重启」。原来两周的活，收成<em class="mp-hl">一个下午</em>。</p></div>
+    <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 条形图</span><span class="fig-title">九片叶子的影响 × 可行性（示意分）</span></div><div class="fig-body"><div class="bars"><div class="bar-row"><span class="bar-label">营业时间</span><div class="bar-track"><div class="bar-fill teal" data-w="100%"></div></div><span class="bar-val">25</span></div><div class="bar-row"><span class="bar-label">定价</span><div class="bar-track"><div class="bar-fill blue" data-w="64%"></div></div><span class="bar-val">16</span></div><div class="bar-row"><span class="bar-label">外卖</span><div class="bar-track"><div class="bar-fill lime" data-w="60%"></div></div><span class="bar-val">15</span></div><div class="bar-row"><span class="bar-label">会员卡</span><div class="bar-track"><div class="bar-fill teal" data-w="48%"></div></div><span class="bar-val">12</span></div><div class="bar-row"><span class="bar-label">装修</span><div class="bar-track"><div class="bar-fill blue" data-w="20%"></div></div><span class="bar-val">5</span></div><div class="bar-row"><span class="bar-label">音乐</span><div class="bar-track"><div class="bar-fill lime" data-w="12%"></div></div><span class="bar-val">3</span></div></div></div><figcaption><b>结论：</b>分数只是把讨论摆到台面上的工具，别把它当成精密测算。<span class="fig-note">口径：分数为教学示意，按 5×5=25 归一化，无实证依据。</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p4">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>05</b> · 常见翻车 / WATCH OUT</span><h2 class="h2">最容易摔的这三跤</h2></div>
+    <div class="grid g3 reveal mp-traps"><div class="card tone-teal mp-trap"><span class="num">01</span><h3>别这样</h3><p>悄悄跳过而不写下来，于是同一支被反复提起，会议里循环讨论。</p></div><div class="card tone-blue mp-trap"><span class="num">02</span><h3>别这样</h3><p>把「容易查」当成唯一标准，最后交出一堆无关痛痒但很好查的数据。</p></div><div class="card tone-lime mp-trap"><span class="num">03</span><h3>别这样</h3><p>剪掉时没写重启条件，情况一变又得从头吵一遍。</p></div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p5">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>06</b> · 动手试一下 / YOUR TURN</span><h2 class="h2">勾选自检</h2><p class="lead">点一点、勾一勾。小组件只帮你看清思路，不替你做决定，也不算分数。</p></div>
+    <div class="mp-tool" data-mp-tool="check"><div class="mp-check-list"><label class="mp-check-row"><input type="checkbox"><span>每支都打了影响与可行性</span><i>✓</i></label><label class="mp-check-row"><input type="checkbox"><span>只留下两支要查</span><i>✓</i></label><label class="mp-check-row"><input type="checkbox"><span>「这次不看」清单写下来了</span><i>✓</i></label><label class="mp-check-row"><input type="checkbox"><span>每支剪掉的都写了重启条件</span><i>✓</i></label></div><div class="mp-tool-out" aria-live="polite">勾一勾，看这一招你差哪一步。</div></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p6">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
+    <blockquote class="mp-take"><span>“</span>剪枝的成果不是那两支，是那份被公开宣布的「不看清单」。<span>”</span></blockquote>
+    <div class="mp-credit"><b>归属与口径</b><p>通用工具被这套流程收编、合作开发，或仅能查到二手来源。好用，但别写成「麦肯锡发明」。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
+  </div>
+</section>
+
+<section class="section mp-sec" id="p7">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>08</b> · 接着看 / KEEP GOING</span><h2 class="h2">相关的另外三招</h2></div>
+    <div class="grid g3 reveal mp-related"><a class="card tone-teal mp-rel" href="method-s04.html"><span class="num">S04</span><h3>议题树</h3><p>大问题能切成哪几块可以分头查的小问题？</p><span class="go">去看这一招</span></a><a class="card tone-teal mp-rel" href="method-s09.html"><span class="num">S09</span><h3>工作计划表</h3><p>每片叶子由谁查、要什么数据、交出什么？</p><span class="go">去看这一招</span></a><a class="card tone-teal mp-rel" href="method-s11.html"><span class="num">S11</span><h3>费米估算 / 数量级速算</h3><p>没数据的时候，能不能先算出一个够用的量级？</p><span class="go">去看这一招</span></a></div>
+    <nav class="mp-pager" aria-label="招式翻页"><a class="mp-pager-card prev" href="method-s07.html"><span class="mono">← 上一招 · S07</span><b>假设驱动</b></a><a class="mp-pager-mid" href="methods.html"><span class="mono">S08 / 48</span><b>全目录</b></a><a class="mp-pager-card next" href="method-s09.html"><span class="mono">下一招 · S09 →</span><b>工作计划表</b></a></nav>
+  </div>
+</section>
+
+</main>
+<div id="siteFooter"></div>
+<div id="audioSlot"></div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
