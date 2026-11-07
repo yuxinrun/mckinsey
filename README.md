@@ -243,7 +243,8 @@ git status --short                        # 确认改动范围
 - 部署前跑一次 `python build_methods.py`，保证生成页与 `DATA` 一致。
 - 站点内链接均为相对路径，放在子路径下也能工作。
 - 建议一并发布 `.qoder/`（正文数字与归属的依据）；可忽略 `__pycache__/` 等本地临时产物。
-- 仓库目前**没有** CI workflow 与 `.gitignore`；如需自动化发布或忽略规则，请自行添加。
+- `.github/workflows/static.yml` 会在 push 到 `main` 时自动部署 GitHub Pages，也可在 Actions 页手动触发；发布根目录就是仓库根目录。
+- 仓库目前没有 `.gitignore`；如需忽略本地临时产物，请自行添加。
 
 ---
 
