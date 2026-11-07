@@ -10,7 +10,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="m-t09" data-next="method-t10.html" data-minutes="5" data-cat="strategy" data-no="T09">
+<body data-page="m-t09" data-next="method-t10.html" data-minutes="7" data-cat="strategy" data-no="T09">
 <div id="siteNav"></div>
 <main class="readable mp-page tone-blue">
 
@@ -21,7 +21,7 @@
   <p class="mp-en mono">DECISION TREE / REAL OPTIONS</p>
   <p class="mp-ask">这一步走错了，还能退回来吗？</p>
   <p class="mp-plain">把大决定拆成一串小决定，每一步都留一个「可以改主意」的口子。</p>
-  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>B · 需带限定词</span><span>第 21 / 48 招</span></div>
+  <div class="page-meta"><span>约 7 分钟</span><span>2 张图 + 1 个可玩组件</span><span>逐层讲透</span><span>B · 需带限定词</span><span>第 21 / 48 招</span></div>
   <div class="mp-keywords"><span class="mp-kw"># 可逆</span><span class="mp-kw"># 分阶段</span><span class="mp-kw"># 信息价值</span><span class="mp-kw"># 止损</span></div>
 </section>
 
@@ -36,7 +36,10 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
     <div class="mp-core"><p>决策树把选择画成：决策点 → 可能结果 → 下一个决策点。配上概率和收益，能算出「现在该不该投」；但更实用的是<strong>期权思维</strong>：优先选那些<strong>可逆、可分阶段、还能学到东西</strong>的动作，把不可逆的大额承诺往后推。</p><p>判断标准就一句：<strong>这步的信息值多少钱</strong>。花小钱先买到一个能改变后续判断的信息，往往比一次性押注划算。反过来，可逆的小决定别开三个月会，直接做。</p></div>
+    <div class="mp-why"><span class="mp-deep-k">为什么管用</span><p>一步到位的投入把「以后才会知道的信息」浪费了。决策树把决定拆成现在与未来两步，期权思维给「先小试、再决定要不要加码」定一个能算的价。</p></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">拆成三块</span><span class="mp-deep-hint">逐块检查，缺哪块就补哪块</span></div><div class="mp-parts"><div class="mp-part"><b>决策节点</b><span>现在自己能选什么，写清选项而不是趋势。</span></div><div class="mp-part"><b>机会节点</b><span>以后会知道什么，以及各自大致概率。</span></div><div class="mp-part"><b>加码 / 退出条件</b><span>达到什么就加，达不到就停，损失封顶多少。</span></div></div>
     <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>把决定画成两三步，标出哪一步是不可逆的。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>给每个结果标「能学到什么」和「退回来要付多少」。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>把不可逆那步往后推，前面插一个便宜的验证。</p></div></div></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">什么时候用，什么时候别用</span></div><div class="mp-bounds"><div class="mp-bound ok"><b>该用</b><p>投入可分阶段、且等一等能拿到关键信息时。</p></div><div class="mp-bound no"><b>别用 / 换招</b><p>机会窗口一次性关闭、或小额试错根本不代表真实规模时，分期反而更贵。</p></div><div class="mp-bound vs"><b>别和「<a href="method-t07.html">不确定性四层级</a>」搞混</b><p>四层级描述未来有多不确定；决策树把这种不确定算进「现在该投多少」。</p></div></div>
   </div>
 </section>
 
@@ -44,6 +47,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
     <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>摊主想花 <em class="mp-hl">8000 元</em>买一台新磨豆机，理由是「下午人多」。这是<strong>不可逆</strong>的一步（二手折价大）。改成分两步：先花 <em class="mp-hl">200 元</em>租一台试<em class="mp-hl">两个周末</em>，同时数清下午真实客量；若每天多卖<em class="mp-hl">40 杯</em>以上再买。租机器那 200 元不是成本，是<strong>买了一份「要不要花 8000」的信息</strong>。若数据不支持，损失就止在 200。</p></div>
+    <div class="mp-proof"><div class="mp-proof-head"><span class="mp-deep-k">一步一步推给你看</span><span class="mp-deep-hint">用符号、句式或示意数字走一遍；涉及数字均为教学假设，不是调研数据</span></div><ol class="mp-proof-list"><li><b>① 画两步</b><code>现在：试一天 / 直接签一个月</code><span>把「以后再决定」画成一个真实节点</span></li><li><b>② 算分支</b><code>试一天成本 80 元 → 达标再加码；不达标损失封顶 80</code><span>先算最坏情况</span></li><li><b>③ 给期权定价</b><code>多花 80 元买「知道周末真实客流」的信息</code><span>值不值看它能避免多大误投</span></li></ol></div>
     <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 正反对照</span><span class="fig-title">两种下注方式</span></div><div class="fig-body"><div class="mp-compare"><div class="mp-cmp-col bad"><b>一次性押注</b><span>先花 8000 元买设备</span><span>事后才知道客量够不够</span><span>不合适也难脱手</span><span>现金流被锁住</span></div><div class="mp-cmp-col good"><b>分阶段 + 留期权</b><span>先花 200 元租两周</span><span>同时把客量数清楚</span><span>达标才买，不达标就停</span><span>最坏损失 200 元</span></div></div></div><figcaption><b>结论：</b>期权思维不保证赚更多，但保证「猜错时少亏很多」。<span class="fig-note">口径：教学示意。</span></figcaption></figure>
   </div>
 </section>
@@ -66,6 +70,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
     <blockquote class="mp-take"><span>“</span>能退回来的先做，退不回来的往后放。<span>”</span></blockquote>
+    <div class="mp-done"><span class="mp-deep-k">做完该留下</span><ul><li>画出了现在与未来的节点</li><li>每条路径有成本与结果</li><li>写了加码与退出的条件</li></ul></div>
     <div class="mp-credit"><b>归属与口径</b><p>通用工具被这套流程收编、合作开发，或仅能查到二手来源。好用，但别写成「麦肯锡发明」。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
   </div>
 </section>

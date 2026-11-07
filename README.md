@@ -56,6 +56,8 @@ python -m http.server 8000
 
 **每个单招详解页固定包含**：一张结构图 + 三步上手 + 一个「周末咖啡摊」示意算例 + 第二张算例图 + 三条常见翻车 + 一个可玩组件 + 带走一句 + 归属与口径 + 相关三招 + 上一招/下一招翻页。
 
+此外每页还嵌了**逐层讲透**的五组模块（见下文 `DEEP`）：为什么管用、拆成三块、什么时候用/别用/别和谁搞混、一步一步推给你看、做完该留下。它们补的是「讲明白」那一层，不增加图表数量。
+
 **朗读连播**由每个 `<body>` 上的 `data-next` 串成链：主链为 `index → methods → 四个分类页 → practice → library → about → index`，`business → thinking → models` 另成一段并汇入 `practice`；48 个单招页按 `S01 → … → C12 → methods.html` 顺序连播，从目录点进任一招即可接入。新增或删减页面时记得维护这条链。
 
 ---
@@ -96,7 +98,7 @@ python build_methods.py
 
 生成器会：
 
-1. 校验 `len(DATA) == 48`；
+1. 校验 `len(DATA) == 48`，并确认 48 招在 `DEEP` 里都有讲透层配置；
 2. 用 `TPL` + `page_html()` 重写 48 个 `method-<mid>.html`；
 3. 用 `rewrite_links()` 回写 `methods.html` 的 48 条「展开讲 →」链接，以及四个分类页每张卡片的 `.mt-more` 详解入口。
 
@@ -119,6 +121,21 @@ python build_methods.py
 
 文本里可用 `[[数字]]` 做高亮、`**词**` 做加粗；其余内容由 `fmt()` 自动 HTML 转义，不需要手写标签。
 
+### 讲透层（`DEEP`）
+
+「讲明白」的内容放在独立的 `DEEP` 字典里，按 `mid` 索引，与 `DATA` 一一对应（不改 `M()` 的位置参数）。每招六类内容，由 `deep_html()` 渲染成五组模块：
+
+| 字段 | 落在页面上 | 要写什么 |
+| --- | --- | --- |
+| `why` | 为什么管用 | 这招抵掉了人的哪个默认毛病、或信息结构上的什么问题 |
+| `parts` | 拆成三块（3 条） | 三个可逐块检查的构成件 |
+| `use` / `skip` | 该用 / 别用 | 适用条件，以及该换招的信号 |
+| `vs` | 别和「某招」搞混 | `(mid, 一句辨析)`，渲染时自动链到那一招 |
+| `proof` | 一步一步推给你看（3 步） | 用符号、句式或示意数字演示结论怎么得出来 |
+| `done` | 做完该留下（3 条） | 可核对的验收项 |
+
+`main()` 会断言 `DEEP` 覆盖全部 48 招，新增招式时别忘了补；`deep_html()` 对缺失配置返回空串，方便分批补内容而不中断生成。`proof` 里的数字一律是教学示意，页面已标注，不要写成调研数据或收益预测。
+
 ### 图表类型（`chart` / `ex` 的 `type`）
 
 `flow`、`bars`、`table`、`matrix`、`cycle`、`layers`、`waterfall`、`scale`、`pyramid`、`formula`、`compare`、`tree` 共 12 种，由 `render_chart()` 渲染。`norm(items, n)` 会把每项字段数补齐/截断到目标长度，因此配置里多写或少写一个字段不会让生成中断。每个图表都自带「结论」与「口径」两行，改动时不要删掉。
@@ -139,13 +156,14 @@ python build_methods.py
 | 想做什么 | 改哪里 |
 | --- | --- |
 | 改某一招的文案、数字、图 | `build_methods.py` 的 `DATA` 对应条目，然后重跑生成器 |
+| 改某一招「为什么管用 / 边界 / 推导 / 验收」 | `DEEP` 里同 `mid` 的条目，然后重跑生成器 |
 | 改所有详解页的版式 / 段落 / 归属声明 | `TPL` 与 `page_html()`，然后重跑生成器 |
 | 改 12 个主页面的内容 | 直接改对应 `.html` |
 | 改分类名、配色、分类页文件名 | `CATS` 字典（同时检查 `assets/app.js` 的 `PAGES`） |
 | 改视觉、图表样式、动效 | `assets/style.css` |
 | 改导航、朗读、主题、微交互逻辑 | `assets/app.js` |
 
-> 若招式数量不再是 48，请同步改 `main()` 里的断言、`page_html()` 中的 `/ 48` 文案、`methods.html` 表格、`about.html` 的页数口径以及首页文案。
+> 若招式数量不再是 48，请同步改 `main()` 里的断言、`DEEP` 的条目、`page_html()` 中的 `/ 48` 文案、`methods.html` 表格、`about.html` 的页数口径以及首页文案。
 
 ---
 
@@ -212,6 +230,7 @@ git status --short                        # 确认改动范围
 - [ ] 四个分类页各有 12 个 `.mt-more`，`methods-comm.html` 的卡片 id 是 `p1`–`p12` 但文件名是 `method-c01`–`c12`。
 - [ ] 无残留占位符 `{{...}}`、无指向不存在文件的站内链接。
 - [ ] 每页 2 张 `<figure>`、1 个 `.mp-tool`、`.mp-pager` 与 `.mp-credit` 齐全。
+- [ ] 48 页都含 `.mp-why` / `.mp-parts` / `.mp-bounds` / `.mp-proof` / `.mp-done`；`DEEP` 覆盖 48 招。
 - [ ] 桌面与 375px 窄屏各抽查一页：图表可见、无横向溢出、导航 active 正确、翻页与四类微交互（各挑一页）可用。
 - [ ] `prefers-reduced-motion` 下动画关闭，键盘可操作。
 
@@ -231,6 +250,7 @@ git status --short                        # 确认改动范围
 ## 维护约定与已知坑
 
 - **不要直接编辑 48 个 `method-*.html`**：下次生成会被整体覆盖。同理，别在 `methods.html` 的手写表格里直接改「展开讲」链接。
+- 新增或删除招式时，`DATA`、`DEEP`、`related`、`methods.html` 表格与 `about.html` 的页数口径要一起动；`main()` 的断言会挡住漏配 `DEEP` 的情况。
 - `CATS['comm']` 有 `anchor='p'` + `mid='c'` 两个值：分类页卡片锚点沿用了 `p1`–`p12`，但生成文件名用 `c01`–`c12`。`rewrite_links()` 用 `cat.get('mid', cat['anchor'])` 处理这个例外，改分类页时别把这个特例「顺手统一」掉。
 - 生成器只依赖 Python 标准库（`os` / `re` / `html`），写文件固定 `encoding='utf-8'`、`newline=''`。日志用 ASCII 是有意的：Windows 控制台默认 cp1252，中文 `print` 会抛 `UnicodeEncodeError`。
 - `page_html()` 会读取相邻 `DATA` 项生成上一招/下一招与相关招式，因此 `related` 里必须是存在的 `mid`，删招时要一并清理。

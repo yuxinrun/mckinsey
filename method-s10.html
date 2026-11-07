@@ -10,7 +10,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="m-s10" data-next="method-s11.html" data-minutes="5" data-cat="solving" data-no="S10">
+<body data-page="m-s10" data-next="method-s11.html" data-minutes="7" data-cat="solving" data-no="S10">
 <div id="siteNav"></div>
 <main class="readable mp-page tone-teal">
 
@@ -21,7 +21,7 @@
   <p class="mp-en mono">KEY DRIVER / PARETO</p>
   <p class="mp-ask">只改一件事，改哪件结果动得最多？</p>
   <p class="mp-plain">别平均用力。先找出那个「动一点、结果动很多」的变量。</p>
-  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>C · 流传说法</span><span>第 10 / 48 招</span></div>
+  <div class="page-meta"><span>约 7 分钟</span><span>2 张图 + 1 个可玩组件</span><span>逐层讲透</span><span>C · 流传说法</span><span>第 10 / 48 招</span></div>
   <div class="mp-keywords"><span class="mp-kw"># 帕累托</span><span class="mp-kw"># 敏感度</span><span class="mp-kw"># 关键变量</span><span class="mp-kw"># 归属误传</span></div>
 </section>
 
@@ -36,7 +36,10 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
     <div class="mp-core"><p>任何结果都能写成几个变量的乘积，比如「日利润 = 路过人数 × 购买率 × 客单价 × 毛利率 − 固定成本」。<strong>关键驱动</strong>就是那个灵敏度最高的变量：同样动 10%，它带来的变化最大。找它的办法不是拍脑袋，是<strong>逐个拨一下、看结果动多少</strong>。</p><p>需要说清楚：80-20 / 帕累托原本是经济学家维尔弗雷多·帕累托关于财富分布的观察，后来被约瑟夫·朱兰等质量管理学者推广成通用法则，<strong>不是麦肯锡提出的</strong>。本站标 C，是因为「麦肯锡 80/20 法则」这个说法本身属于归属误传；工具照用，别叫错名字。</p></div>
+    <div class="mp-why"><span class="mp-deep-k">为什么管用</span><p>结果对各个变量的敏感度差别极大，但人习惯平均用力。找出那个一动结果就大动的变量，等于把有限的精力放到唯一值得精算的地方。</p></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">拆成三块</span><span class="mp-deep-hint">逐块检查，缺哪块就补哪块</span></div><div class="mp-parts"><div class="mp-part"><b>结果公式</b><span>先把结果写成乘法或加法式子，否则谈不上敏感度。</span></div><div class="mp-part"><b>小幅扰动</b><span>每个变量统一动 10%，看结果动多少。</span></div><div class="mp-part"><b>只精算一个</b><span>把估计误差会翻盘的那个变量查准，其余取粗值。</span></div></div>
     <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>把结果写成一个乘法或加法公式。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>一次只动一个变量，记下结果变化。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>把力气放到拨动最明显的那一两个上。</p></div></div></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">什么时候用，什么时候别用</span></div><div class="mp-bounds"><div class="mp-bound ok"><b>该用</b><p>变量多、时间少，且结果能写成一个式子时。</p></div><div class="mp-bound no"><b>别用 / 换招</b><p>变量互相强耦合、或存在阈值突变时，单点敏感度会骗人。</p></div><div class="mp-bound vs"><b>别和「<a href="method-s08.html">优先级剪枝 / 影响–可行性矩阵</a>」搞混</b><p>关键驱动看「谁对结果最敏感」，矩阵还多看一层「今天查不查得到」。</p></div></div>
   </div>
 </section>
 
@@ -44,6 +47,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
     <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>咖啡摊日利润公式：<em class="mp-hl">1000 人</em> × <em class="mp-hl">8%</em> × <em class="mp-hl">18 元</em> × <em class="mp-hl">60%</em> − <em class="mp-hl">300 元</em> = <em class="mp-hl">564 元</em>。逐个拨一点：路过人数 +50 → +43 元；购买率 +1 个点 → +108 元；客单价 +2 元 → +96 元；毛利率 +2 个点 → +29 元。<strong>最值钱的是购买率</strong>——拦住人多问一句，比去街口发传单划算得多。</p></div>
+    <div class="mp-proof"><div class="mp-proof-head"><span class="mp-deep-k">一步一步推给你看</span><span class="mp-deep-hint">用符号、句式或示意数字走一遍；涉及数字均为教学假设，不是调研数据</span></div><ol class="mp-proof-list"><li><b>① 写公式</b><code>日利润 = 客流 × 进店率 × 客单价 × 毛利率 − 固定成本</code><span>变量必须能各自取数</span></li><li><b>② 各扰动 10%</b><code>客流 +10% → 利润 +18%；客单价 +10% → 利润 +12%</code><span>同一幅度才好比</span></li><li><b>③ 只在客流上精算</b><code>客流的估计误差 ±20% 会翻盘，其余先取粗值</code><span>把精度花在会改变决定的地方</span></li></ol></div>
     <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 敏感度条形图</span><span class="fig-title">各动一点点，谁带来的变化最大</span></div><div class="fig-body"><div class="bars"><div class="bar-row"><span class="bar-label">购买率 +1 个点</span><div class="bar-track"><div class="bar-fill teal" data-w="100%"></div></div><span class="bar-val">+108 元</span></div><div class="bar-row"><span class="bar-label">客单价 +2 元</span><div class="bar-track"><div class="bar-fill blue" data-w="89%"></div></div><span class="bar-val">+96 元</span></div><div class="bar-row"><span class="bar-label">路过人数 +50 人</span><div class="bar-track"><div class="bar-fill lime" data-w="40%"></div></div><span class="bar-val">+43 元</span></div><div class="bar-row"><span class="bar-label">毛利率 +2 个点</span><div class="bar-track"><div class="bar-fill teal" data-w="27%"></div></div><span class="bar-val">+29 元</span></div></div></div><figcaption><b>结论：</b>最灵敏的往往不是最显眼的那个；加人流看起来热闹，改购买率更划算。<span class="fig-note">口径：按上面示意参数逐个单独变动计算，非实测数据。</span></figcaption></figure>
   </div>
 </section>
@@ -66,6 +70,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
     <blockquote class="mp-take"><span>“</span>先拨一拨，再使劲；别在灵敏度最低的变量上加班。<span>”</span></blockquote>
+    <div class="mp-done"><span class="mp-deep-k">做完该留下</span><ul><li>有一条结果公式</li><li>有各变量的扰动对照</li><li>明确写了「只有哪个变量值得精算」</li></ul></div>
     <div class="mp-credit"><b>归属与口径</b><p>归属常被误传或只是业内口头说法。本站收录是为了讲清它到底是什么，不是给它认爹。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
   </div>
 </section>

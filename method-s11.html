@@ -10,7 +10,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="m-s11" data-next="method-s12.html" data-minutes="5" data-cat="solving" data-no="S11">
+<body data-page="m-s11" data-next="method-s12.html" data-minutes="7" data-cat="solving" data-no="S11">
 <div id="siteNav"></div>
 <main class="readable mp-page tone-teal">
 
@@ -21,7 +21,7 @@
   <p class="mp-en mono">BACK-OF-THE-ENVELOPE</p>
   <p class="mp-ask">没数据的时候，能不能先算出一个够用的量级？</p>
   <p class="mp-plain">把大问题拆成几个「各自能猜、也各自能去查」的小数字，先求个数量级。</p>
-  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>B · 需带限定词</span><span>第 11 / 48 招</span></div>
+  <div class="page-meta"><span>约 7 分钟</span><span>2 张图 + 1 个可玩组件</span><span>逐层讲透</span><span>B · 需带限定词</span><span>第 11 / 48 招</span></div>
   <div class="mp-keywords"><span class="mp-kw"># 数量级</span><span class="mp-kw"># 因子</span><span class="mp-kw"># 可修正</span><span class="mp-kw"># 速算</span></div>
 </section>
 
@@ -36,7 +36,10 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
     <div class="mp-core"><p>费米估算要的不是精确，是<strong>别在数量级上错</strong>。做法是把目标拆成 3–5 个因子相乘，每个因子单独给一个「差不多」的值；因为误差会互相抵消一部分，结果常常比直觉靠谱。</p><p>它真正的威力在<strong>可修正</strong>：结果写成一个乘法式子，谁觉得哪个数不对，就单独改那一个，不用推翻整份估算。凡是不能写成式子的「我估计大概……」，都没法被改进。</p></div>
+    <div class="mp-why"><span class="mp-deep-k">为什么管用</span><p>缺数据时人容易整件事停摆。费米估算把未知拆成一串能猜到数量级的小因子，先给一个「大概几位数」的答案，好过精确地说不知道。</p></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">拆成三块</span><span class="mp-deep-hint">逐块检查，缺哪块就补哪块</span></div><div class="mp-parts"><div class="mp-part"><b>拆成相乘的因子</b><span>目标 = 因子 A × 因子 B × 因子 C，且每个都能估。</span></div><div class="mp-part"><b>每个因子给理由</b><span>猜也要写「为什么是这个量级」，方便回头改。</span></div><div class="mp-part"><b>用上下界包住</b><span>给区间而不是一个假精确的数。</span></div></div>
     <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>把目标写成 3–5 个因子相乘。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>每个因子给一个能说明理由的粗略值。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>算出量级，再挑最没把握的那个去查实。</p></div></div></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">什么时候用，什么时候别用</span></div><div class="mp-bounds"><div class="mp-bound ok"><b>该用</b><p>要先判断「值不值得继续查」「这事大概多大」时。</p></div><div class="mp-bound no"><b>别用 / 换招</b><p>结论对小数点敏感（定价、合规阈值、成本核算）时必须拿真实数据。</p></div><div class="mp-bound vs"><b>别和「<a href="method-s12.html">三角验证 + 反证体检</a>」搞混</b><p>费米估算先给个数量级；三角验证再确认这个量级靠不靠谱。</p></div></div>
   </div>
 </section>
 
@@ -44,6 +47,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
     <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>问：「这个片区一周能卖多少杯咖啡？」拆成：<em class="mp-hl">3 万人</em> × <em class="mp-hl">20%</em>会喝咖啡 × 每人每周 <em class="mp-hl">2 杯</em> × 本站能拿到 <em class="mp-hl">5%</em>的份额 = <em class="mp-hl">600 杯/周</em>。四个数都能各自去查：人口查街道数据、比例查常识、频次问老客、份额看自己小票。若最后发现「20%」明显偏高，只改这一格，结论立刻从 600 掉到 300。<strong>先有量级，再决定要不要做精细调研。</strong></p></div>
+    <div class="mp-proof"><div class="mp-proof-head"><span class="mp-deep-k">一步一步推给你看</span><span class="mp-deep-hint">用符号、句式或示意数字走一遍；涉及数字均为教学假设，不是调研数据</span></div><ol class="mp-proof-list"><li><b>① 拆因子</b><code>周末销量 = 路过人数 × 停留率 × 购买率 × 单价</code><span>拆到每个因子都能凭常识给量级</span></li><li><b>② 取量级</b><code>500 × 0.1 × 0.3 × 12 ≈ 180 元 / 天</code><span>每个数旁边写一句取值理由</span></li><li><b>③ 给上下界</b><code>停留率换成 0.05 / 0.2 → 90 ~ 360 元</code><span>量级是「百元」，足以决定要不要继续查</span></li></ol></div>
     <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 对照表</span><span class="fig-title">估算完，该先查哪一个？</span></div><div class="fig-body"><div class="table-scroll" style="margin-top:0"><table><thead><tr><th>因子</th><th>心里有底吗</th><th>去哪查</th></tr></thead><tbody><tr><td>片区人口 3 万</td><td>较有底</td><td>街道公开数据</td></tr><tr><td>会喝咖啡 20%</td><td>最没底</td><td>小范围问 20 个人</td></tr><tr><td>每周 2 杯</td><td>一般</td><td>翻两周小票</td></tr><tr><td>份额 5%</td><td>较有底</td><td>自己摊位流水</td></tr></tbody></table></div></div><figcaption><b>结论：</b>优先查「最没底 × 影响最大」的那一格，别平均分配精力。<span class="fig-note">口径：本站教学归纳。</span></figcaption></figure>
   </div>
 </section>
@@ -66,6 +70,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
     <blockquote class="mp-take"><span>“</span>估算的价值不是那个数，是那串能被逐个替换的因子。<span>”</span></blockquote>
+    <div class="mp-done"><span class="mp-deep-k">做完该留下</span><ul><li>因子拆到能各自解释</li><li>每个因子写了取值理由</li><li>答案带上下界，而不是一个假精确的数</li></ul></div>
     <div class="mp-credit"><b>归属与口径</b><p>通用工具被这套流程收编、合作开发，或仅能查到二手来源。好用，但别写成「麦肯锡发明」。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
   </div>
 </section>

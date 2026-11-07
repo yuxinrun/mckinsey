@@ -640,6 +640,38 @@ html.js .reveal.in { animation: revealIn .62s var(--ease); }
 .mp-credit { margin-top: 22px; padding: 20px 22px; border: 1px dashed var(--line-strong); border-radius: 16px; font-size: 12.5px; line-height: 1.8; color: var(--muted); }
 .mp-credit b { color: var(--ink); }
 .mp-credit p { margin: 8px 0 0; }
+
+/* ---------- 讲透层：原理 / 拆解 / 边界 / 推导 / 验收 ---------- */
+.mp-deep-k { display: inline-block; padding: 4px 10px; border: 1px solid color-mix(in srgb, var(--mp) 35%, var(--line)); border-radius: 999px; background: var(--mp-soft); color: var(--mp); font-family: var(--font-mono); font-size: 9px; font-weight: 650; letter-spacing: .12em; }
+.mp-deep-hint { display: block; margin-top: 6px; font-size: 11.5px; line-height: 1.6; color: var(--faint); }
+.mp-deep-head { margin: 30px 0 14px; }
+.mp-why { margin-top: 22px; padding: 18px 22px; border: 1px dashed var(--mp); border-radius: 0 14px 14px 0; background: var(--panel-2); }
+.mp-why p { margin: 12px 0 0; font-size: 14px; line-height: 1.9; color: var(--ink-2); }
+.mp-parts, .mp-bounds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.mp-part { padding: 16px 18px; border: 1px solid var(--line); border-top: 3px solid var(--mp); border-radius: 14px; background: var(--panel); }
+.mp-part b { display: block; margin-bottom: 8px; font-size: 13.5px; color: var(--ink); }
+.mp-part span { display: block; font-size: 12.5px; line-height: 1.75; color: var(--muted); }
+.mp-bound { padding: 16px 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+.mp-bound b { display: block; margin-bottom: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; color: var(--ink); }
+.mp-bound p { margin: 0; font-size: 12.5px; line-height: 1.75; color: var(--muted); }
+.mp-bound.ok { border-color: color-mix(in srgb, var(--accent) 32%, var(--line)); }
+.mp-bound.ok b { color: var(--accent); }
+.mp-bound.no { border-color: color-mix(in srgb, var(--coral) 32%, var(--line)); }
+.mp-bound.no b { color: var(--coral); }
+.mp-bound.vs b { color: var(--blue); }
+.mp-bound.vs a { color: var(--ink); border-bottom: 1px dashed var(--mp); }
+.mp-proof { margin: 0 0 24px; padding: 20px 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.mp-proof-head { margin-bottom: 6px; }
+.mp-proof-list { margin: 14px 0 0; padding: 0; list-style: none; }
+.mp-proof-list li { display: grid; gap: 6px; padding: 12px 0; border-top: 1px dashed var(--line); }
+.mp-proof-list li b { font-size: 13px; color: var(--ink); }
+.mp-proof-list li code { display: block; padding: 9px 12px; border-radius: 8px; background: var(--panel-2); font-family: var(--font-mono); font-size: 11.5px; line-height: 1.7; color: var(--mp); white-space: normal; overflow-wrap: anywhere; }
+.mp-proof-list li span { font-size: 12px; line-height: 1.7; color: var(--muted); }
+.mp-done { margin-top: 22px; padding: 18px 22px; border: 1px dashed var(--line-strong); border-radius: 16px; background: var(--panel-2); }
+.mp-done ul { display: grid; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+.mp-done li { position: relative; padding-left: 22px; font-size: 13px; line-height: 1.75; color: var(--ink-2); }
+.mp-done li::before { content: '□'; position: absolute; left: 0; color: var(--mp); font-size: 15px; }
+
 .mp-rel h3 { font-size: 15px; }
 .mp-rel p { font-size: 12.5px; line-height: 1.7; color: var(--muted); }
 
@@ -726,12 +758,13 @@ html.js .reveal.in { animation: revealIn .62s var(--ease); }
 
 @media (max-width: 960px) {
   .mp-step-grid, .mp-flip-grid { grid-template-columns: 1fr 1fr; }
+  .mp-parts, .mp-bounds { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 760px) {
   .mp-hero { margin-top: 18px; padding: 26px 22px; border-radius: 20px; }
   .mp-no { right: 16px; font-size: 5rem; }
   .mp-sec { padding: 40px 0; }
-  .mp-step-grid, .mp-flip-grid, .mp-compare, .mp-pager { grid-template-columns: 1fr; }
+  .mp-step-grid, .mp-flip-grid, .mp-compare, .mp-pager, .mp-parts, .mp-bounds { grid-template-columns: 1fr; }
   .mp-pager-card.next { text-align: left; }
   .mp-matrix { padding-left: 0; }
   .mp-axis-y { display: none; }

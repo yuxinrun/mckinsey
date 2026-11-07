@@ -10,7 +10,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="m-s06" data-next="method-s07.html" data-minutes="5" data-cat="solving" data-no="S06">
+<body data-page="m-s06" data-next="method-s07.html" data-minutes="7" data-cat="solving" data-no="S06">
 <div id="siteNav"></div>
 <main class="readable mp-page tone-teal">
 
@@ -21,7 +21,7 @@
   <p class="mp-en mono">YES / NO TREE</p>
   <p class="mp-ask">沿着一串是 / 否，能不能直接走到一个动作？</p>
   <p class="mp-plain">对问题已经比较熟时，用一串二选一，把人直接送到一个具体动作。</p>
-  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>B · 需带限定词</span><span>第 6 / 48 招</span></div>
+  <div class="page-meta"><span>约 7 分钟</span><span>2 张图 + 1 个可玩组件</span><span>逐层讲透</span><span>B · 需带限定词</span><span>第 6 / 48 招</span></div>
   <div class="mp-keywords"><span class="mp-kw"># 决策树</span><span class="mp-kw"># 二选一</span><span class="mp-kw"># 动作</span><span class="mp-kw"># 分流</span></div>
 </section>
 
@@ -36,7 +36,10 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
     <div class="mp-core"><p>是否树是三种逻辑树里最「 actionable」的一种：每个节点都是一个<strong>可以当场回答的是非题</strong>，每条路径末端必须落到一个动作，不能写「再观察」。它适合流程成熟、判断条件已知的场景，比如客服排障、报销审核、现场决策。</p><p>顺序有讲究：<strong>把最能分流、又最好判断的问题放在树根</strong>。如果第一个问题就要查三天数据，这棵树就白画了。</p></div>
+    <div class="mp-why"><span class="mp-deep-k">为什么管用</span><p>当选项只剩两三个，继续拆解就是浪费。是否树把判断压成一串是/否，每个岔口对应一个能查到的事实，于是争论从「我觉得」变成「去查这个数」。</p></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">拆成三块</span><span class="mp-deep-hint">逐块检查，缺哪块就补哪块</span></div><div class="mp-parts"><div class="mp-part"><b>一串二选一</b><span>每个岔口必须能用是或否回答。</span></div><div class="mp-part"><b>岔口绑一个事实</b><span>「够不够」这类模糊判断要先换成可核的数。</span></div><div class="mp-part"><b>每条路径落到动作</b><span>不能出现走到叶子却不知道该干嘛。</span></div></div>
     <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>把最关键、最好判断的那个是非题放在树根。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>每个分叉给两个互斥出口，不留中间态。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>每条路径末端写一个动作，动词开头。</p></div></div></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">什么时候用，什么时候别用</span></div><div class="mp-bounds"><div class="mp-bound ok"><b>该用</b><p>选项清楚、判定条件明确，需要快速给出「做 / 不做」时。</p></div><div class="mp-bound no"><b>别用 / 换招</b><p>条件本身模糊或互相纠缠（比如「品牌感够不够」）时，二叉树会假装精确。</p></div><div class="mp-bound vs"><b>别和「<a href="method-s04.html">议题树</a>」搞混</b><p>议题树用来展开未知，是否树用来在已知选项之间收敛。</p></div></div>
   </div>
 </section>
 
@@ -44,6 +47,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
     <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>咖啡摊早上的树：<strong>「昨天剩下的豆子还够今天用吗？」</strong> 够 → 「按常规量开门」；不够 → 「今天有配送吗？」 有 → 「先卖挂耳，等配送」；没有 → 「把今日菜单改成<em class="mp-hl">只卖两种</em>，并贴告示」。整棵树<em class="mp-hl">三个问题、四个动作</em>，新员工看一遍就能照做，不用每次打电话问老板。</p></div>
+    <div class="mp-proof"><div class="mp-proof-head"><span class="mp-deep-k">一步一步推给你看</span><span class="mp-deep-hint">用符号、句式或示意数字走一遍；涉及数字均为教学假设，不是调研数据</span></div><ol class="mp-proof-list"><li><b>① 第一个岔口</b><code>多开 2 小时的增量毛利 &gt; 0？</code><span>先问最便宜、最能一票否决的</span></li><li><b>② 继续分叉</b><code>是 → 再问「是否 ≥ 200 元」；否 → 不延</code><span>每个岔口只加一个条件</span></li><li><b>③ 叶子绑动作</b><code>≥200 → 延；0~200 → 先试一天再定</code><span>不允许悬空路径</span></li></ol></div>
     <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 对照表</span><span class="fig-title">三种树的分工速查</span></div><div class="fig-body"><div class="table-scroll" style="margin-top:0"><table><thead><tr><th>树</th><th>节点写什么</th><th>末端写什么</th></tr></thead><tbody><tr><td>议题树</td><td>子问题</td><td>要查的数据 / 谁去查</td></tr><tr><td>假设树</td><td>必要支撑</td><td>证实或推翻</td></tr><tr><td>是否树</td><td>是非题</td><td>一个动词开头的动作</td></tr></tbody></table></div></div><figcaption><b>结论：</b>看末端写的是什么，就能反推自己画的是哪种树。<span class="fig-note">口径：本站教学归纳。</span></figcaption></figure>
   </div>
 </section>
@@ -66,6 +70,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
     <blockquote class="mp-take"><span>“</span>每条路都得以动词结尾，写「再看看」的树枝该剪掉。<span>”</span></blockquote>
+    <div class="mp-done"><span class="mp-deep-k">做完该留下</span><ul><li>每个岔口都能用一个事实回答</li><li>没有悬空路径</li><li>每条路径都写了动作</li></ul></div>
     <div class="mp-credit"><b>归属与口径</b><p>通用工具被这套流程收编、合作开发，或仅能查到二手来源。好用，但别写成「麦肯锡发明」。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
   </div>
 </section>

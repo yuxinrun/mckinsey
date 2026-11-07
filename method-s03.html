@@ -10,7 +10,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="m-s03" data-next="method-s04.html" data-minutes="5" data-cat="solving" data-no="S03">
+<body data-page="m-s03" data-next="method-s04.html" data-minutes="7" data-cat="solving" data-no="S03">
 <div id="siteNav"></div>
 <main class="readable mp-page tone-teal">
 
@@ -21,7 +21,7 @@
   <p class="mp-en mono">MUTUALLY EXCLUSIVE, COLLECTIVELY EXHAUSTIVE</p>
   <p class="mp-ask">分类有没有重复？合起来装得下全部情况吗？</p>
   <p class="mp-plain">拆完的几块，彼此不抢同一件事；合起来又能把全部情况装进去。</p>
-  <div class="page-meta"><span>约 5 分钟</span><span>2 张图 + 1 个可玩组件</span><span>A · 一手可核</span><span>第 3 / 48 招</span></div>
+  <div class="page-meta"><span>约 7 分钟</span><span>2 张图 + 1 个可玩组件</span><span>逐层讲透</span><span>A · 一手可核</span><span>第 3 / 48 招</span></div>
   <div class="mp-keywords"><span class="mp-kw"># 不重不漏</span><span class="mp-kw"># 一把尺子</span><span class="mp-kw"># Minto</span><span class="mp-kw"># 反例测试</span></div>
 </section>
 
@@ -36,7 +36,10 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>02</b> · 拆开看 / HOW IT WORKS</span><h2 class="h2">它到底在解决什么</h2></div>
     <div class="mp-core"><p>两半各自管一件事：<strong>相互独立</strong>（不重）说的是同一层里别有两个筐能装同一样东西；<strong>完全穷尽</strong>（不漏）说的是所有筐加起来别留缝。检验办法很土但有效——随手举一个具体例子，看它会不会同时落进两个筐，或者一个筐都落不进。</p><p>关键是<strong>同一层只用一把尺子</strong>。按时间切就全按时间，按对象切就全按对象。混着切，必然重叠。MECE 由 Barbara Minto 在麦肯锡工作期间提出并写入《金字塔原理》，是「人写的书」，不是公司发布的公文。</p></div>
+    <div class="mp-why"><span class="mp-deep-k">为什么管用</span><p>人列清单时习惯想到哪写到哪，于是同一件事被算两遍、真正的空白却没人看见。MECE 的价值不是分得漂亮，而是让每份分析量对上唯一一块，也让遗漏被迫暴露在纸上。</p></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">拆成三块</span><span class="mp-deep-hint">逐块检查，缺哪块就补哪块</span></div><div class="mp-parts"><div class="mp-part"><b>同一层同一把刀</b><span>一层里只用一个切分维度，别把「按地区」和「按产品」混在一排。</span></div><div class="mp-part"><b>块与块不重叠</b><span>同一笔收入不能被两块各算一次，否则加总会虚高。</span></div><div class="mp-part"><b>合起来盖得住</b><span>盖不住就补，或干脆写明「这次不看的」，把遗漏变成决定。</span></div></div>
     <div class="mp-steps"><div class="mp-steps-head"><span class="eyebrow"><b>03</b> · 三步上手 / DO IT</span><h3>今天下午就能做的三件事</h3></div><div class="mp-step-grid"><div class="mp-step" style="--i:0"><span class="mp-step-n">01</span><p>先选一把尺子：时间、性质、对象、流程，四选一。</p></div><div class="mp-step" style="--i:1"><span class="mp-step-n">02</span><p>用同一把尺子把这一层切完，一般 3 项左右。</p></div><div class="mp-step" style="--i:2"><span class="mp-step-n">03</span><p>举两个反例测试：一个会不会进两格，一个会不会没格子。</p></div></div></div>
+    <div class="mp-deep-head"><span class="mp-deep-k">什么时候用，什么时候别用</span></div><div class="mp-bounds"><div class="mp-bound ok"><b>该用</b><p>要把一个大题拆成活、要分工，或要检查有没有漏项时。</p></div><div class="mp-bound no"><b>别用 / 换招</b><p>对领域还陌生、连有哪些可能都不知道时，硬凑 MECE 会把未知剪掉。</p></div><div class="mp-bound vs"><b>别和「<a href="method-s04.html">议题树</a>」搞混</b><p>MECE 是切分的验收标准；议题树是用这把刀切出来的一张具体图。</p></div></div>
   </div>
 </section>
 
@@ -44,6 +47,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>04</b> · 举个真例子 / THE COFFEE STAND</span><h2 class="h2">周末咖啡摊，摊开来算一遍</h2></div>
     <div class="mp-example"><span class="mp-example-tag">EXAMPLE · 示意算例</span><p>要给咖啡摊收入分类，按「顾客类型」切：<em class="mp-hl">堂食 / 带走 / 预订</em>，一把尺子切到底，清爽。若写成「堂食 / 带走 / 周末 / 老客」，就有麻烦了：一个周末来堂食的老客，同时落进三格，<em class="mp-hl">三格都能算他</em>，最后收入相加会虚高。改用「时段 × 客群」做两张表，才是干净的切法。</p></div>
+    <div class="mp-proof"><div class="mp-proof-head"><span class="mp-deep-k">一步一步推给你看</span><span class="mp-deep-hint">用符号、句式或示意数字走一遍；涉及数字均为教学假设，不是调研数据</span></div><ol class="mp-proof-list"><li><b>① 选一把刀</b><code>营收 = 客流 × 转化率 × 客单价</code><span>按公式切，天然不重不漏</span></li><li><b>② 查重叠</b><code>客单价里不能再含「客流变化」的影响</code><span>否则同一效应被算两遍</span></li><li><b>③ 查遗漏</b><code>Σ 三块变化 ≈ 营收变化</code><span>对不上就说明还有第四块没找到</span></li></ol></div>
     <figure class="fig mp-fig"><div class="fig-head"><span>FIG 02 · 对照表</span><span class="fig-title">四种常用尺子</span></div><div class="fig-body"><div class="table-scroll" style="margin-top:0"><table><thead><tr><th>尺子</th><th>适合切什么</th><th>咖啡摊例子</th></tr></thead><tbody><tr><td>时间</td><td>有先后顺序的事</td><td>准备 / 营业 / 收摊</td></tr><tr><td>对象</td><td>按人群或品类分</td><td>堂食 / 带走 / 预订</td></tr><tr><td>流程</td><td>按环节分</td><td>点单 / 制作 / 交付</td></tr><tr><td>二分</td><td>非此即彼</td><td>新客 / 老客</td></tr></tbody></table></div></div><figcaption><b>结论：</b>选不出尺子，通常说明你还没想清楚「到底要按什么口径回答问题」。<span class="fig-note">口径：四种切法为中文课程常见归纳，非 Minto 原书原文分类。</span></figcaption></figure>
   </div>
 </section>
@@ -66,6 +70,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>07</b> · 带走一句 / TAKEAWAY</span></div>
     <blockquote class="mp-take"><span>“</span>一把尺子切一层，再举一个反例戳一下。<span>”</span></blockquote>
+    <div class="mp-done"><span class="mp-deep-k">做完该留下</span><ul><li>每层只有一个切分维度</li><li>任意两块能说清为什么不重叠</li><li>写明了「这次不看的」</li></ul></div>
     <div class="mp-credit"><b>归属与口径</b><p>官网专文、官方解决方案页、原书或权威书目可以直接核到；本站只做通俗化转述。</p><p>本页是公开资料的通俗化讲解，与 McKinsey &amp; Company 无隶属、授权或代言关系。示例中的人、店、数字、比例、评分均为教学示意，不是调研数据或收益预测；本站不提供投资、经营、法律、人事或职业变动的个案建议。逐条依据见 <a href="library.html">资料库</a> 与项目内 <code>.qoder/research-methods.md</code>。</p></div>
   </div>
 </section>
